@@ -1,0 +1,151 @@
+
+### Cypress Custom .gitignore ###
+*.log.*
+dist-*
+build
+.history
+.publish
+_test-output
+cypress.zip
+.babel-cache
+
+# from config, compiled .js files
+packages/config/src/*.js
+
+
+
+
+# npm packages
+npm/**/cypress/screenshots
+
+
+
+# from system-tests
+system-tests/.projects
+system-tests/.http-mitm-proxy
+system-tests/fixtures/large-img
+system-tests/lib/fixtureDirs.ts
+
+# from npm/react
+/npm/react/bin/*
+/npm/react/cypress/videos
+/npm/react/.babel-cache
+
+# from npm/webpack-dev-server
+/npm/webpack-dev-server/cypress/videos
+
+# from npm/grep
+/npm/grep/cypress/videos
+
+# from errors
+/packages/errors/__snapshot-images__
+/packages/errors/__snapshot-md__
+/packages/errors/__snapshot-html-local__
+
+# graphql, auto-generated
+/packages/launchpad/src/generated
+/packages/app/src/generated
+/packages/frontend-shared/src/generated
+/packages/frontend-shared/cypress/e2e/support/e2eProjectDirs.ts
+
+# from old npm/create-cypress-tests
+/npm/create-cypress-tests/initial-template
+/npm/create-cypress-tests/src/test-output
+
+# Building app binary
+scripts/support
+binary-url.json
+
+# Allows us to dynamically create eslint rules that override the default for Decaffeinate scripts
+cli/visual-snapshots
+
+# Created by https://www.gitignore.io/api/osx,git,node,windows,intellij,linux
+# Edit at https://www.gitignore.io/?templates=osx,git,node,windows,intellij,linux
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Fleet
+.fleet/
+
+# User-specific stuff
+.idea
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+### OSX ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# node modules.
+node_modules
+
+# Cypress artifacts.
+cypress/videos
+cypress/screenshots
+
+#Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
