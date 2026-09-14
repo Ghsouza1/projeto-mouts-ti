@@ -3,7 +3,6 @@ import { faker } from '@faker-js/faker';
 describe('front serverest', () => {
   
   it('cadastrar usuarios', () => {
-
     cy.intercept('POST', 'https://serverest.dev/usuarios').as('usuarios');
     
     cy.visit('https://front.serverest.dev/login')
@@ -22,7 +21,6 @@ describe('front serverest', () => {
     cy.wait('@usuarios').then((request) => {
         expect(request.response.statusCode).to.equal(201);
     });
-
   })
 
   it('nome é obrigatório', () => {    
